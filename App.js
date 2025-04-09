@@ -4,6 +4,7 @@ import Baner from './Componentes/Baner';
 import Cuerpo from './Componentes/Cuerpo';
 import Botones from './Componentes/Botones';
 
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -14,15 +15,17 @@ export default function App() {
         />
         
       </View>
-
+ <Text style={styles.titulo}> Login your account </Text>
       <View style={styles.containerCuerpo}>
-        <Text style={styles.titulo}> Login your account </Text>
+        
         <Cuerpo
           nombre="Email"
+          icon = 'mail'
         />
 
         <Cuerpo
-          nombre="Password" />
+          nombre="Password"
+          icon = 'lock' />
         <Text style={styles.texto}> Forgot your Password </Text>
 
         <Botones
@@ -63,7 +66,7 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 20,
     fontWeight: 'bold',
-    padding: 20
+
   },
   texto: {
     fontSize: 14,

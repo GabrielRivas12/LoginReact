@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, TextInput, View, StyleSheet, TouchableOpacity } from 'react-native'
 
+
 function Botones(props) {
     return (
         <View style={StyleSheet.container}>

@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
 import { Text, TextInput, View, StyleSheet, Button } from 'react-native'
+import Feather from '@expo/vector-icons/Feather';
 
 function Cuerpo(props) {
 
     return (
         <View>
-            <View style={StyleSheet.container}>
-                <Text style={styles.nombre}> {props.nombre} </Text>
-                <TextInput placeholder={props.placeholder}
-                    style={styles.cajaTexto} />
+            
+            <Text style={styles.nombre}> {props.nombre} </Text>
+            <View style={styles.container}>
+
+                <TextInput
+                    placeholder={props.placeholder}
+                    style={styles.cajaTexto}
+                    placeholderTextColor='#aaa' />
+
+                <View style={styles.iconContainer}>
+                    <Feather name={props.icon} size={24} color='white' />
+                </View>
             </View>
-
-
         </View>
     )
 
@@ -23,9 +30,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderColor: '#f90',
         borderWidth: 1,
-        borderRadius: 25,
-        overflow: 'hidden',
+        borderRadius: 10,
         alignItems: 'center',
+        paddingHorizontal:0,
+        marginBottom: 20,
+        overflow: 'hidden'
     },
     containerbotones: {
         flexDirection: 'row',
@@ -36,20 +45,24 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
     cajaTexto: {
-        backgroundColor: '#F1F3F6',
         borderColor: '#f90',
-        borderWidth: 2,
-        borderRadius: 10,
         fontSize: 16,
         color: '#000',
-        width: 320,
-        marginBottom: 20
+        width: 275,
+        height:50
+        
     },
     nombre: {
         fontWeight: 'bold',
         paddingHorizontal: 15,
-
-
-    }
-
+    },
+    iconContainer: {
+        backgroundColor: '#FD7401',
+        padding: 12,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderTopEndRadius: 5,
+        borderBottomRightRadius: 5,
+        height: 50
+    },
 })
