@@ -5,7 +5,7 @@ import Feather from '@expo/vector-icons/Feather';
 function Cuerpo(props) {
 
     return (
-        <View>
+        <View style={styles.containerv}>
             
             <Text style={styles.nombre}> {props.nombre} </Text>
             <View style={styles.container}>

@@ -5,8 +5,11 @@ import { Text, TextInput, View, StyleSheet, TouchableOpacity } from 'react-nativ
 function Botones(props) {
     return (
         <View style={StyleSheet.container}>
-            <TouchableOpacity style={styles.boton}>
-                <Text style={styles.botonTexto}>{props.boton}</Text>
+            <TouchableOpacity style={[
+                styles.boton,
+                 {backgroundColor: props.color}
+                 ]}>
+                <Text style={[styles.botonTexto, {color: props.colorText}]}>{props.boton}</Text>
             </TouchableOpacity>
         </View>
 
@@ -25,14 +28,24 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     boton: {
-        backgroundColor: '#FD7401',
         borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#FD7401',
         alignItems: 'center',
-        paddingVertical: 10,     
+        paddingVertical: 10,
         marginVertical: 10,
-        width: 320,              
+        width: 320,
         height: 50,
         justifyContent: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
     },
     botonTexto: {
         color: '#fff',

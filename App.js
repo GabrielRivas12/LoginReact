@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Baner from './Componentes/Baner';
-import Cuerpo from './Componentes/Cuerpo';
+import Cuerpo from './Componentes/Textinput';
 import Botones from './Componentes/Botones';
 
 
@@ -12,28 +12,38 @@ export default function App() {
       <View style={styles.containerBanner}>
         <Baner
           imagenB={require('./assets/Imagenes/login.png')}
+
         />
-        
+
+
       </View>
- <Text style={styles.titulo}> Login your account </Text>
+
+
+      <Text style={styles.titulo}> Login your account </Text>
       <View style={styles.containerCuerpo}>
-        
+
         <Cuerpo
           nombre="Email"
-          icon = 'mail'
+          placeholder='ejemplo@gmail.com'
+          icon='mail'
         />
 
         <Cuerpo
           nombre="Password"
-          icon = 'lock' />
+          placeholder='Ingrese la contraseña'
+          icon='lock' />
         <Text style={styles.texto}> Forgot your Password </Text>
 
         <Botones
           boton='Login Now'
+          color= '#FD7401'
+          colorText = 'white'
         />
 
-        <Botones style={styles.botonpassword}
+        <Botones
           boton='Signup Now'
+          color = 'white'
+          colorText = '#FD7401'
         />
       </View>
       <StatusBar style="auto" />
@@ -71,11 +81,8 @@ const styles = StyleSheet.create({
   texto: {
     fontSize: 14,
     textDecorationLine: 'underline',
-    paddingHorizontal: 40,
     textAlign: 'right',
   },
-  botonpassword: {
-    backgroundColor: 'while'
-  }
+
 
 });

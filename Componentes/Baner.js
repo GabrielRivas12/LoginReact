@@ -3,11 +3,13 @@ import {View, Image, Text, StyleSheet} from "react-native";
 
 function Baner(props){
     return(
+            
         <View style={styles.conteiner}>
             <Image style={styles.imagenB} source={props.imagenB}/>
-             <Text style={styles.titulo}> Welcome! </Text>
-        </View>
-
+            <Text style={styles.titulo}> Welcome! </Text>
+             
+       
+</View>
     );
 }
 
