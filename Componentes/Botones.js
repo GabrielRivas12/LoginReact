@@ -4,7 +4,7 @@ import { Text, TextInput, View, StyleSheet, TouchableOpacity } from 'react-nativ
 
 function Botones(props) {
     return (
-        <View style={StyleSheet.container}>
+        <View style={styles.container}>
             <TouchableOpacity style={[
                 styles.boton,
                  {backgroundColor: props.color}
@@ -21,9 +21,6 @@ export default Botones;
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        borderColor: '#f90',
-        borderWidth: 1,
-        borderRadius: 25,
         overflow: 'hidden',
         alignItems: 'center',
     },

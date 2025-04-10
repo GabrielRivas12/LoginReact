@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View, Image, Text, StyleSheet} from "react-native";
+import {View, Image, Text, StyleSheet, ScrollView} from "react-native";
 
 function Baner(props){
     return(
@@ -7,7 +7,6 @@ function Baner(props){
         <View style={styles.conteiner}>
             <Image style={styles.imagenB} source={props.imagenB}/>
             <Text style={styles.titulo}> Welcome! </Text>
-             
        
 </View>
     );
@@ -21,7 +20,8 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#F1F3F6'
+        backgroundColor: '#F1F3F6',
+        paddingTop: 35
     },
     imagenB:{
         height:230,
@@ -29,13 +29,15 @@ const styles = StyleSheet.create({
         borderRadius: 115,
         borderWidth: 1,
         borderColor: '#ccc',
-        margin: 15
         
     },
     titulo:{
-        fontSize: 20,
+        fontSize: 25,
         justifyContent: 'center',
         fontWeight: 'bold',
+        textAlign: 'center',
+        paddingTop: 20,
+        paddingBottom: 25
         
     }
 

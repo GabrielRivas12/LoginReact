@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import Baner from './Componentes/Baner';
 import Cuerpo from './Componentes/Textinput';
 import Botones from './Componentes/Botones';
@@ -8,44 +8,46 @@ import Botones from './Componentes/Botones';
 export default function App() {
   return (
     <View style={styles.container}>
+      <ScrollView style={styles.scrol} showsVerticalScrollIndicator={false}>
+      
+        <View style={styles.containerBanner}>
+          <Baner
+            imagenB={require('./assets/Imagenes/login.png')}
 
-      <View style={styles.containerBanner}>
-        <Baner
-          imagenB={require('./assets/Imagenes/login.png')}
-
-        />
-
-
-      </View>
+          />
 
 
-      <Text style={styles.titulo}> Login your account </Text>
-      <View style={styles.containerCuerpo}>
+        </View>
 
-        <Cuerpo
-          nombre="Email"
-          placeholder='ejemplo@gmail.com'
-          icon='mail'
-        />
+        <Text style={styles.titulo}> Login your account </Text>
+        <View style={styles.containerCuerpo}>
 
-        <Cuerpo
-          nombre="Password"
-          placeholder='Ingrese la contraseña'
-          icon='lock' />
-        <Text style={styles.texto}> Forgot your Password </Text>
+          <Cuerpo
+            nombre="Email"
+            placeholder='ejemplo@gmail.com'
+            icon='mail'
+          />
 
-        <Botones
-          boton='Login Now'
-          color= '#FD7401'
-          colorText = 'white'
-        />
+          <Cuerpo
+            nombre="Password"
+            placeholder='Ingrese la contraseña'
+            icon='lock' />
+          <Text style={styles.texto}> Forgot your Password? </Text>
 
-        <Botones
-          boton='Signup Now'
-          color = 'white'
-          colorText = '#FD7401'
-        />
-      </View>
+          <Botones
+            boton='Login Now'
+            color='#FD7401'
+            colorText='white'
+          />
+
+          <Botones
+            boton='Signup Now'
+            color='white'
+            colorText='#FD7401'
+          />
+
+        </View>
+      </ScrollView>
       <StatusBar style="auto" />
     </View>
   );
@@ -57,6 +59,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  scrol: {
+    width: '100%'
+    
   },
   containerBanner: {
     flex: 2,
@@ -71,17 +77,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    paddingTop: 30
 
   },
   titulo: {
     fontSize: 20,
     fontWeight: 'bold',
+    textAlign: 'center',
+    paddingTop: 40
 
   },
   texto: {
     fontSize: 14,
     textDecorationLine: 'underline',
     textAlign: 'right',
+    width: '100%',
+    paddingRight: 50
   },
 
 

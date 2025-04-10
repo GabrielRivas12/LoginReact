@@ -13,7 +13,7 @@ function Cuerpo(props) {
                 <TextInput
                     placeholder={props.placeholder}
                     style={styles.cajaTexto}
-                    placeholderTextColor='#aaa' />
+                    />
 
                 <View style={styles.iconContainer}>
                     <Feather name={props.icon} size={24} color='white' />
@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal:0,
         marginBottom: 20,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        marginTop: 5
     },
     containerbotones: {
         flexDirection: 'row',
@@ -48,8 +49,9 @@ const styles = StyleSheet.create({
         borderColor: '#f90',
         fontSize: 16,
         color: '#000',
-        width: 275,
-        height:50
+        width: 265,
+        height:50,
+        marginLeft: 10
         
     },
     nombre: {
